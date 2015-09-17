@@ -1,0 +1,15 @@
+/*
+ Theme Name: Cat Wennekamp
+ Theme URI: http://www.catwennekamp.com
+ Theme Author: Daniel Bogre Udell (@dbudell) for Matte Finish
+ Author URI: http://www.dbudell.com
+ Description: Designed and built exclusively for fashion stylist Cat Wennekamp.  
+ Version: 0
+ License: Standard IP
+ */
+
+@import url('css/normalize.css');
+
+@import url('css/main.css');
+
+@import url('css/custom.css');
