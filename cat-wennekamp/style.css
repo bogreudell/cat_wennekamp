@@ -8,6 +8,8 @@
  License: Standard IP
  */
 
-@import url('css/normalize');
+@import url('css/normalize.css');
 
-@import url('css/main');
+@import url('css/main.css');
+
+@import url('css/custom.css');
