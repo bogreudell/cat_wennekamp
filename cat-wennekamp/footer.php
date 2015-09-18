@@ -1,11 +1,17 @@
         </div><!-- end .content-wrapper -->
+        <footer id="footer">
+            <p>© 2015 Cat Wennekamp</p>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/js/js/plugins.js"></script>
-        <script src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/js/js/main.js"></script>
-        
+        <script src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/js/plugins.js"></script>
+        <script src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/js/main.js"></script>
+        <!--<script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js"></script>-->
+
         <!-- Instagram banner below -->
+        <?php if ( is_front_page() ) : ?>
         <script type="text/javascript">
+            
             var feed = new Instafeed({
                 get: 'user',
                 limit: 13,
@@ -16,7 +22,7 @@
             });
             feed.run();
         </script>
-
+        <?php endif; ?>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
