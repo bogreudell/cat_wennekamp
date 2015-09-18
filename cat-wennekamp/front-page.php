@@ -1,6 +1,6 @@
 <?php 
 
-get_header(); 
+get_header();
 
 $module_1_header = get_field('module_1_header');
 $module_1_subheader = get_field('module_1_subheader');
@@ -54,5 +54,11 @@ $module_3_thumbnail_title = $module_3_thumbnail['title'];
 		</a>
 	</li>
 </ul>
+
+<div id="instafeed-wrap">
+	<div id="instafeed-banner" class="homepage-blog-title">Follow Cat on Instagram</div>
+	<div id="instafeed"></div>	
+</div>
+
 
 <?php get_footer(); ?>

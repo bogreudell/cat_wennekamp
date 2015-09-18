@@ -1,5 +1,18 @@
 /* global styles */
 
+body, body * {
+	color:#000;
+}
+
+a, a:visited {
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+p a {
+	font-style:italic;
+}
+
 #header { 
 	position:relative;
 }
@@ -25,6 +38,14 @@
 			list-style-type:none;
 		}
 
+			#nav li a, #nav li a:visited {
+				font-style:normal;
+			}
+
+			#nav li a:hover, .current_page_item a {
+				font-style:italic !important;
+			}
+
 .banner_img {
     width:100%;
     height:80vh;
@@ -33,6 +54,27 @@
 .content-wrapper {
 	max-width:1500px;
 	margin:0 auto;
+	overflow:auto;
+	padding:1% 5%;
+}
+
+	.page_header {
+		padding:30px;
+		border-bottom:1px solid #888;
+		text-align:center;
+	}
+
+	.square-img-wrap {
+			width:100%;
+		}
+
+			.square-img-wrap .inner {
+				padding-bottom:100%;
+			}
+
+#footer {
+	width:100%;
+	text-align:center;
 }
 
 /* homepage styles */
@@ -55,3 +97,99 @@
 			.homepage-modules .square-img-wrap .inner {
 				padding-bottom:100%;
 			}
+
+#instafeed {
+	width: 100%;
+    position: relative;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+    border-top: 1px solid #666;
+    background: #fff;
+}
+
+	#instafeed-banner {
+		padding:10px 0;
+		text-align:center;
+	}
+
+	#instafeed img {
+	    height: 225px;
+	    display: inline-block;
+	    width: auto;
+	    opacity: .8;
+	    -webkit-transition: all .2s ease-in-out;
+	    -moz-transition: all .2s ease-in-out;
+	    -ms-transition: all .2s ease-in-out;
+	    -o-transition: all .2s ease-in-out;
+	    transition: all .2s ease-in-out;
+	}
+
+	#instafeed img:hover {
+		opacity:1;
+	}
+
+/* about styles */
+
+body.page-template-template-about .content-wrapper {
+	text-align:center;
+}
+
+/* portfolio styles */
+
+.page-template-template-portfolio .content-wrapper {
+	width:100%;
+	max-width:none;
+}
+
+/* blog grid styles */
+
+div#blogs_map {
+	width:100%;
+	height:100%;
+}
+
+.blog_filter {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+	.blog_filter li {
+		display:inline;
+	}
+
+		.filter_button {
+			background:none;
+			padding:0;
+			text-transform:uppercase;
+			border:0;
+		}
+
+		.filter_button:active, .filter_button:focus {
+			outline:0;
+		}
+
+.blog_grid {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+	.blog_grid li {
+		display:inline-block;
+		width:30%;
+		margin:1%;
+		border-bottom:1px solid #888;
+		vertical-align:top;
+	}
+
+		.post_category {
+			padding-right:5px;
+		}
+
+		.post_location {
+			padding-left:5px;
+			border-left:1px solid #888;
+		}
