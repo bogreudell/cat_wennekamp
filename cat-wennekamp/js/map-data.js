@@ -8,8 +8,8 @@ var HOME = (function($) {
     var infoWindow;
     var map;
 
-    var MAP_CENTER_LAT = 25;  
-    var MAP_CENTER_LNG = 25;
+    var MAP_CENTER_LAT = 40;  
+    var MAP_CENTER_LNG = -100;
 
 
    /*var openInfoWindow = function(theMarker) {
@@ -50,10 +50,10 @@ var HOME = (function($) {
 
     var initMarkers = function(){
 
-        var image = new google.maps.MarkerImage('http://labs.google.com/ridefinder/images/mm_20_red.png',
-        //var image = new google.maps.MarkerImage('',
+        //var image = new google.maps.MarkerImage('http://labs.google.com/ridefinder/images/mm_20_red.png',
+        var image = new google.maps.MarkerImage('http://catwennekamp.com/wp-content/themes/cat-wennekamp/img/map_marker.png',
             // This marker is 20 pixels wide by 32 pixels tall.
-            new google.maps.Size(7, 7),
+            new google.maps.Size(15, 15),
             // The origin for this image images 0,0.
             new google.maps.Point(0,0),
             // The anchor for this image is the base of the flagpole at 0,32.
@@ -113,7 +113,7 @@ var HOME = (function($) {
         
         map = new google.maps.Map(document.getElementById('blogs_map'),  {
             center                  : new google.maps.LatLng(MAP_CENTER_LAT, MAP_CENTER_LNG) 
-            ,zoom                   : 3
+            ,zoom                   : 5
             ,mapTypeId              : google.maps.MapTypeId.ROADMAP
             ,disableDefaultUI       : true
             ,navigationControl      : true
@@ -127,108 +127,92 @@ var HOME = (function($) {
                 style : google.maps.NavigationControlStyle.SMALL
             }
             ,panControl : false
-            ,styles: [{
-                    "featureType": "administrative",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#444444"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "color": "#ededed"
-                        },
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "saturation": -100
-                        },
-                        {
-                            "lightness": 45
-                        },
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "visibility": "on"
-                        }
-                    ]
-                }]        
+            ,styles: [
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#444444"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#e0e0e0"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    }
+]       
         });
 
      

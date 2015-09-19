@@ -1,4 +1,12 @@
         </div><!-- end .content-wrapper -->
+        <?php if ( is_front_page() ) : ?>
+        
+            <div id="instafeed-wrap">
+                <div id="instafeed-banner" class="homepage-blog-title"><img class="social_icon" src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/instagram.png">Follow Cat on Instagram</div>
+                <div id="instafeed"></div>  
+            </div>
+        
+        <?php endif; ?>
         <footer id="footer">
             <p>© 2015 Cat Wennekamp</p>
         </footer>

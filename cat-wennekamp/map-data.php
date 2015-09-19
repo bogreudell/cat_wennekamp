@@ -50,7 +50,6 @@
 
   function ar_get_scripts() {
 
-    //wp_enqueue_script('google-maps', '//maps.google.com/maps/api/js?sensor=false', false, null, true );
     wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyCp6WMCF0GTwGBNU1cibhr_Hzd3VePozbA', false, null, true );
     wp_enqueue_script('location_data',  get_template_directory_uri() . '/js/map-data.js', false, null, true );
 

@@ -25,6 +25,8 @@ $module_3_thumbnail_title = $module_3_thumbnail['title'];
 
 ?>
 
+<div class="content-wrapper">
+
 <ul class="homepage-modules">
 	<li>
 		<a href="<?php echo $module_1_url; ?>">
@@ -54,11 +56,6 @@ $module_3_thumbnail_title = $module_3_thumbnail['title'];
 		</a>
 	</li>
 </ul>
-
-<div id="instafeed-wrap">
-	<div id="instafeed-banner" class="homepage-blog-title">Follow Cat on Instagram</div>
-	<div id="instafeed"></div>	
-</div>
 
 
 <?php get_footer(); ?>

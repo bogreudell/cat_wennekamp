@@ -28,7 +28,12 @@
             </div>
             <ul id="nav">
                 <?php wp_list_pages('orderby=menu_order&title_li='); ?>
+                <li class="social_icon"><a href="https://www.facebook.com/Cat-Wennekamp-Fashion-Stylist-140362836015080/timeline/" target="_blank"><img src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/facebook.png" alt="facebook"></a></li>
+                <li class="social_icon"><a href="https://twitter.com/catwennekamp" target="_blank"><img src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/twitter.png" alt="twitter"></a></li>
+                <li class="social_icon"><a href="https://www.pinterest.com/catwennekamp/" target="_blank"><img src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/pinterest.png" alt="pinterest"></a></li>
+                <li class="social_icon"><a href="https://instagram.com/catwennekamp/?hl=en" target="_blank"><img src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/instagram.png" alt="instagram"></a></li>
             </ul>
+            <button id="nav_trigger">≡</button>
             <div class="clearfix"></div>
         </header>
 
@@ -43,7 +48,9 @@ if ( $banner_img ) :
 
     if ( $banner_img_url ) : ?>
 
-<div class="banner_img" style="background:url(<?php echo $banner_img_url; ?>); background-size:cover;"></div>
+<div class="banner_img" style="background:url(<?php echo $banner_img_url; ?>) center center no-repeat; background-size:cover;">
+    <div class="banner_logo" style="background:url(<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/logo_white.svg) center center no-repeat; background-size:contain;"></div>
+</div>
 
 <?php
     
