@@ -27,7 +27,15 @@
                 </a>
             </div>
             <ul id="nav">
-                <?php wp_list_pages('orderby=menu_order&title_li='); ?>
+            <!-- need to manually add .current_page_item class -->
+            <?php 
+                $page_args = array( 'sort_column' => 'menu_order' ); 
+                $pages = get_pages( $page_args );
+            
+                foreach ( $pages as $page ) : 
+            ?>
+                <li><a href="<?php echo $page->guid; ?>" title="<?php echo strtoupper($page->post_title); ?>"><?php echo $page->post_title; ?></a></li>
+            <?php endforeach; ?>
                 <li class="social_icon"><a href="https://www.facebook.com/Cat-Wennekamp-Fashion-Stylist-140362836015080/timeline/" target="_blank"><img src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/facebook.png" alt="facebook"></a></li>
                 <li class="social_icon"><a href="https://twitter.com/catwennekamp" target="_blank"><img src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/twitter.png" alt="twitter"></a></li>
                 <li class="social_icon"><a href="https://www.pinterest.com/catwennekamp/" target="_blank"><img src="<?php bloginfo('url'); ?>/wp-content/themes/cat-wennekamp/img/pinterest.png" alt="pinterest"></a></li>

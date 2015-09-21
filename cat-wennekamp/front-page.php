@@ -29,31 +29,31 @@ $module_3_thumbnail_title = $module_3_thumbnail['title'];
 
 <ul class="homepage-modules">
 	<li>
-		<a href="<?php echo $module_1_url; ?>">
+		<?php if ( $module_1_url ) : ?><a href="<?php echo $module_1_url; ?>"><?php endif; ?>
 			<p class="homepage-blog-title"><?php echo $module_1_header; ?></p>
 			<p class="subheader"><?php echo $module_1_subheader; ?></p>
 			<div class="square-img-wrap" style="background:url(<?php echo $module_1_thumbnail_url; ?>) center center no-repeat; background-size:cover;">
 				<div class="inner"></div>
 			</div>
-		</a>
+		<?php if ( $module_1_url ) : ?></a><?php endif; ?>
 	</li>
 	<li>
-		<a href="<?php echo $module_2_url; ?>">
+		<?php if ( $module_2_url ) : ?><a href="<?php echo $module_2_url; ?>"><?php endif; ?>
 			<p class="homepage-blog-title"><?php echo $module_2_header; ?></p>
 			<p class="subheader"><?php echo $module_2_subheader; ?></p>
 			<div class="square-img-wrap" style="background:url(<?php echo $module_2_thumbnail_url; ?>) center center no-repeat; background-size:cover;">
 				<div class="inner"></div>
 			</div>
-		</a>
+		<?php if ( $module_2_url ) : ?></a><?php endif; ?>
 	</li>
 	<li>
-		<a href="<?php echo $module_3_url; ?>">
+		<?php if ( $module_3_url ) : ?><a href="<?php echo $module_3_url; ?>"><?php endif; ?>
 			<p class="homepage-blog-title"><?php echo $module_3_header; ?></p>
 			<p class="subheader"><?php echo $module_3_subheader; ?></p>
 			<div class="square-img-wrap" style="background:url(<?php echo $module_3_thumbnail_url; ?>) center center no-repeat; background-size:cover;">
 				<div class="inner"></div>
 			</div>
-		</a>
+		<?php if ( $module_3_url ) : ?></a><?php endif; ?>
 	</li>
 </ul>
 
